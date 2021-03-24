@@ -1,0 +1,60 @@
+﻿@page "/ticketsales"
+
+<h3 class="mb-5">Ticket Sales</h3>
+
+<div class="row">
+    <div class="col-2">
+        <span>Select month</span>
+        <select class="form-control" @bind="@SelectedMonth">
+            <option value=""></option>
+            @foreach (var month in MonthList)
+            {
+                <option value="@month"> @month </option>
+            }
+        </select>
+    </div>
+    <div class="col-2">
+        <span>Select year</span>
+        <select class="form-control" @bind="@SelectedYear">
+            <option value=""></option>
+            @foreach (var year in YearList)
+            {
+                <option value="@year"> @year</option>
+            }
+        </select>
+    </div>
+</div>
+
+
+<button @onclick="GetSales" class="mt-4">Get Sales</button>
+
+<br />
+
+@if (ordersList == null)
+{
+    <p><em>No data</em></p>
+}
+else
+{
+    <table class="ticket-sales-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in ordersList)
+            {
+                <tr>
+                    <td>@order.OrderPlaced</td>
+                    <td>@order.OrderTotal</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <Pager PageIndex="@paginatedList.PageIndex" TotalPages=@paginatedList.TotalPages OnClick="PageIndexChanged"
+           HasNextPage=@paginatedList.HasNextPage HasPreviousPage=@paginatedList.HasPreviousPage>
+    </Pager>
+}

@@ -1,0 +1,18 @@
+﻿@if (TotalPages > 0)
+{
+    <div class="float-left pager mt-3">
+        <button type="button" class="@((PageIndex == 1) ? "pager-btn-disabled" : "pager-btn")" @onclick="@(() => OnClick.InvokeAsync(1))">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="@(HasPreviousPage ? "pager-btn" : "pager-btn-disabled")" @onclick="@(() => OnClick.InvokeAsync(PageIndex - 1))">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </button>
+        <span>@PageIndex</span>
+        <button type="button" class="@(HasNextPage ? "pager-btn" : "pager-btn-disabled")" @onclick="@(() => OnClick.InvokeAsync(PageIndex + 1))">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="@((PageIndex == TotalPages) ? "pager-btn-disabled" : "pager-btn")" @onclick="@(() => OnClick.InvokeAsync(TotalPages))">
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        </button>
+    </div>
+}

@@ -1,0 +1,44 @@
+﻿@page "/eventoverview"
+
+<h3>Event Overview</h3>
+
+<div class="m-2 d-flex justify-content-end">
+    <button @onclick="AddNewEvent" class="mr-1">Add event</button>
+    <button @onclick="ExportEvents">Export events</button>
+</div>
+
+
+
+@if (Events == null)
+{
+<p><em>Loading...</em></p>
+}
+else
+{
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Event name</th>
+            <th>Event date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ev in Events)
+            {
+        <tr>
+            <td><img src="@(ev.ImageUrl)" class="event-image" /></td>
+            <td class="event-name">@ev.Name </td>
+            <td class="event-date">@ev.Date.ToShortDateString() </td>
+            <td>
+                <a href="@($"eventdetails/{ev.EventId}")" class="event-purchase-button btn">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </td>
+        </tr>
+            }
+    </tbody>
+</table>
+}
+

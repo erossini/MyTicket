@@ -1,0 +1,26 @@
+﻿@page "/login"
+
+<div class="mt-5 row">
+    <div class="card col-12 col-lg-6 mr-auto ml-auto p-3">
+        <h3 class="card-title">Login to GloboTicket</h3>
+        <div class="card-body">
+            <EditForm Model="@LoginViewModel" OnValidSubmit="HandleValidSubmit">
+                <div class="input-group row mt-2">
+                    <label class="col-12 col-md-4 p-0" for="userName">Email:</label>
+                    <InputText id="userName" class="col-12 col-md-8 login-field" @bind-Value="LoginViewModel.Email"></InputText>
+                </div>
+                <div class="input-group row mt-2">
+                    <label class="col-12 col-md-4 p-0" for="password">Password:</label>
+                    <InputText type="password" id="password" class="col-12 col-md-8 login-field" @bind-Value="@LoginViewModel.Password"></InputText>
+                </div>
+                <div class="input-group row mt-2">
+                    <div class="offset-md-4">
+                        <button class="m-2 p-2">Login</button>
+                    </div>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+<span class="label label-error">@Message</span>

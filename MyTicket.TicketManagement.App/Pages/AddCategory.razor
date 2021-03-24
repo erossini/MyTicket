@@ -1,0 +1,19 @@
+﻿@page "/addcategory"
+
+<h3 class="mb-5">New category</h3>
+
+@Message
+
+<EditForm Model="@CategoryViewModel" OnValidSubmit="@HandleValidSubmit">
+
+    <DataAnnotationsValidator />
+    <ValidationSummary></ValidationSummary>
+
+    <div class="form-group row">
+        <label for="name" class="col-sm-3">Category name: </label>
+        <InputText id="name" class="form-control col-sm-5" @bind-Value="@CategoryViewModel.Name" placeholder="Enter category name"></InputText>
+        <ValidationMessage class="offset-sm-3 col-sm-5" For="@(() => CategoryViewModel.Name)" />
+    </div>
+
+    <button type="submit" class="submit-button mt-3">Save category</button>
+</EditForm>

@@ -1,0 +1,37 @@
+﻿@page "/register"
+
+
+<div class="mt-5 row">
+    <div class="card col-12 col-lg-6 mr-auto ml-auto p-3">
+        <h3 class="card-title">Register</h3>
+        <div class="card-body">
+            <EditForm Model="@RegisterViewModel" OnValidSubmit="HandleValidSubmit">
+                <div class="input-group col mt-2">
+                    <label class="col-12 col-md-4 p-0" for="firstName">First name:</label>
+                    <InputText id="firstName" class="col-12 col-md-8 login-field" @bind-Value="RegisterViewModel.FirstName"></InputText>
+                </div>
+                <div class="input-group col mt-2">
+                    <label class="col-12 col-md-4 p-0" for="lastName">Last name:</label>
+                    <InputText type="lastName" class="col-12 col-md-8 login-field" @bind-Value="@RegisterViewModel.LastName"></InputText>
+                </div>
+                <div class="input-group col mt-2">
+                    <label class="col-12 col-md-4 p-0" for="email">Email:</label>
+                    <InputText id="email" class="col-12 col-md-8 login-field" @bind-Value="RegisterViewModel.Email"></InputText>
+                </div>
+                <div class="input-group col mt-2">
+                    <label class="col-12 col-md-4 p-0" for="userName">Username:</label>
+                    <InputText id="userName" class="col-12 col-md-8 login-field" @bind-Value="RegisterViewModel.UserName"></InputText>
+                </div>
+                <div class="input-group col mt-2">
+                    <label class="col-12 col-md-4 p-0" for="password">Password:</label>
+                    <InputText id="password" type="password" class="col-12 col-md-8 login-field" @bind-Value="RegisterViewModel.Password"></InputText>
+                </div>
+                <div class="input-group col mt-2">
+                    <div class="offset-md-4">
+                        <button class="m-2 p-2">Register</button>
+                    </div>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
