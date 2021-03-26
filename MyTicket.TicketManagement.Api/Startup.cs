@@ -81,7 +81,7 @@ namespace MyTicket.TicketManagement.Api
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "GloboTicket Ticket Management API",
+                    Title = "MyTicket Ticket Management API",
 
                 });
 
@@ -104,7 +104,7 @@ namespace MyTicket.TicketManagement.Api
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "GloboTicket Ticket Management API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyTicket Ticket Management API");
             });
 
             app.UseCustomExceptionHandler();
