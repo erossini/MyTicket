@@ -10,8 +10,10 @@ The source code of this post is on [GitHub](https://github.com/erossini/MyTicket
 
 *   [Architecting ASP.NET Core applications](https://www.puresourcecode.com/dotnet/net-core/architecting-asp-net-core-applications/)
 *   [Setting up the application core](https://www.puresourcecode.com/dotnet/net-core/setting-up-the-application-asp-net-core/)
-*   Creating the infrastructure project
-*   Adding an API using ASP.NET Core
-*   Testing the application code
-*   Adding a UI
-*   Improving on the application's behaviour
+*   [Introducing CQRS in the architecture](https://www.puresourcecode.com/dotnet/introducing-cqrs-in-the-architecture)
+*   [Adding Validation using Fluent](https://www.puresourcecode.com/dotnet/adding-validation-using-fluent-validation/)
+*   [Creating the infrastructure project](https://www.puresourcecode.com/dotnet/creating-the-infrastructure-project/)
+*   [Adding an API using ASP.NET Core](https://www.puresourcecode.com/dotnet/net-core/adding-an-api-using-asp-net-core/)
+*   [How testing the application code](https://www.puresourcecode.com/dotnet/csharp/how-testing-the-application-code/)
+*   [How adding an UI built in Blazor](https://www.puresourcecode.com/dotnet/net-core/how-adding-an-ui-built-in-blazor/)
+*   [Improving on the application's behaviour](https://www.puresourcecode.com/dotnet/net-core/improving-on-the-applications-behaviour/)
